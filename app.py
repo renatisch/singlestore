@@ -10,4 +10,4 @@ def read_root():
 
 @app.get("/.well-known/singlestore-verify/token")
 def read_root():
-    return "d791cb4a-155b-478f-a733-58b036306030"
+    return "f3e80765-f223-429f-b3a5-d33ac8c039bd"

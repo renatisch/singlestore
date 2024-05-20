@@ -7,6 +7,11 @@ ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
 ssl_context.load_cert_chain("cert.pem", keyfile="key.pem")
 
 
+@app.get("/")
+def read_root():
+    return "hello world"
+
+
 @app.get("/.well-known/singlestore-verify/token")
 def read_root():
-    return "f5e220b6-7779-4de9-acf5-d79dc0981236"
+    return "d791cb4a-155b-478f-a733-58b036306030"

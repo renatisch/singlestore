@@ -1,15 +1,11 @@
 from fastapi import FastAPI
-from fastapi.middleware.httpsredirect import HTTPSRedirectMiddleware
-import ssl
 
 app = FastAPI()
-ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
-ssl_context.load_cert_chain("cert.pem", keyfile="key.pem")
 
 
 @app.get("/")
 def read_root():
-    return "hello world"
+    return {"message": "Hello World"}
 
 
 @app.get("/.well-known/singlestore-verify/token")
